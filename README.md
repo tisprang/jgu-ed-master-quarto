@@ -2,8 +2,16 @@
 
 ## Installing
 
+To install with template document use:
+
 ```bash
 quarto add template tisprang/jgu-ed-master-quarto
+```
+
+To install only the extension without any template:
+
+```bash
+quarto use tisprang/jgu-ed-master-quarto
 ```
 
 ## Using

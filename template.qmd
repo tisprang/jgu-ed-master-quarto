@@ -17,8 +17,6 @@ svb: Prof. Dr. Claudia Landwehr
 student-number: 1234567
 format:
   ed-master-pdf: default
-author: tisprang
-date: last-modified
 ---
 
 ```{r}

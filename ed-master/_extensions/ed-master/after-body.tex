@@ -1,0 +1,42 @@
+\newgeometry{top=2cm,bottom=2cm,left=2cm,right=2cm}
+\newcommand*\wildcard[2][7.5cm]{\vspace*{2cm}\parbox{#1}{\hrulefill\par#2}}
+\cleardoublepage
+\thispagestyle{empty}
+{\sffamily
+    \begin{center}
+        {\LARGE\bfseries Erklärung für schriftliche Prüfungsleistungen \par}
+        {\normalsize gemäß §19 Abs. 3 und Abs. 5 der Ordnung für die Prüfung in Masterstudiengängen (MAPO) \par}
+        \vspace{.5em}
+    \end{center}
+    {\normalsize Masterstudiengang \bfseries Empirische Demokratieforschung \par}
+    \vspace{.5em}
+    $for(by-author)$
+    {\normalsize Hiermit erkläre ich, \bfseries $by-author.name.literal$ \par}
+    {\normalsize Matrikelnummer: \bfseries $student-number$ \par}
+    {\normalsize dass ich die vorliegende Arbeit mit dem Titel \par}
+    \begin{center}
+        $if(title)$
+        {\Large\bfseries $title$ \par}
+        $endif$
+        $if(subtitle)$
+        {\large\bfseries --- \par}
+        {\large\bfseries $subtitle$ \par}
+        $endif$
+        \vspace{1em}
+    \end{center}
+    {\fontsize{12}{12}\raggedright selbstständig verfasst und keine anderen als die angegebenen Quellen oder Hilfsmittel (einschließlich elektronischer Medien und Online-Quellen) benutzt habe. Von der Ordnung zur Sicherung guter wissenschaftlicher Praxis in Forschung und Lehre und zum Verfahren zum Umgang mit wissenschaftlichem Fehlverhalten habe ich Kenntnis genommen (zu finden unter \url{http://www.uni-mainz.de/organisation/Dateien/ordnung_sicherung_guter_wissenschaftlicher_praxis.pdf}). \par}
+    \vspace{1em}
+    {\fontsize{12}{12}\raggedright Mir ist bewusst, dass ein Täuschungsversuch oder ein Ordnungsverstoß vorliegt, wenn sich diese Erklärung als unwahr erweist. §19 Absatz 3 und Absatz 5 der Prüfungsordnung (s.u.) habe ich zur Kenntnis genommen. \par}
+    \begingroup
+        \centering
+        \wildcard{Ort, Datum}
+        \hspace{1cm}
+        \wildcard{Unterschrift}
+        \par
+    \endgroup
+    {\fontsize{10}{10}\bfseries Auszug aus § 19 Abs. 3 AMP: Versäumnis, Rücktritt, Täuschung, Ordnungsverstoß \par}
+    {\fontsize{10}{10} (3) Versucht die Kandidatin oder der Kandidat das Ergebnis einer Prüfung durch Täuschung oder Benutzung nicht zugelassener Hilfsmittel zu beeinflussen, oder erweist sich eine Erklärung gem. Absatz 5 als unwahr, gilt die betreffende Prüfungsleistung als mit "nicht ausreichend" (5,0) absolviert (...) \par}
+    \vspace{1em}
+    {\fontsize{10}{10}\bfseries §19 Abs. 5 MAPO: Versäumnis, Rücktritt, Täuschung, Ordnungsverstoß \par}
+    {\fontsize{10}{10} (5) Bei schriftlichen Prüfungsleistungen gemäß § 13 mit Ausnahme von Klausuren hat die oder der Studierende bei der Abgabe der Arbeit eine schriftliche Erklärung vorzulegen, dass sie oder er die Arbeit selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt hat. Erweist sich eine solche Erklärung als unwahr oder liegt ein sonstiger Täuschungsversuch oder ein Ordnungsverstoß bei der Erbringung von Prüfungsleistungen vor, gelten die Absätze 3 und 4 entsprechend. \par}
+}

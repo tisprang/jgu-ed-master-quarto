@@ -1,0 +1,38 @@
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+$if(title)$
+\newgeometry{top=3cm,bottom=3cm,left=3cm,right=3cm}
+\cleardoublepage
+\thispagestyle{empty}
+{\centering
+\hbox{}\vskip 0cm plus 0fill
+{\large $title$ \par}
+$if(subtitle)$
+{\large --- \par}
+{\large $subtitle$ \par}
+$endif$
+\vspace{40ex}
+{\large\bfseries Hausarbeit zur Erlangung des \par}
+{\large\bfseries akademischen Grades \par}
+{\large\bfseries Master of Arts in Politikwissenschaft \par}
+{\large\bfseries Empirische Demokratieforschung \par}
+\vskip 0cm plus 2fill
+{\large Vorgelegt dem Fachbereich 02 -- Sozialwissenschaften, Medien und Sport \par}
+{\large der Johannes Gutenberg-Universität Mainz \par}
+{\large von \par}
+$for(by-author)$
+{\large $by-author.name.literal$ \par}
+{\large aus $city-of-birth$ \par}
+{\large $date$ \par}
+$endfor$%
+}
+\restoregeometry
+\pagebreak
+\thispagestyle{empty}
+\vspace*{\fill}
+{\large Erstgutachten: $sva$ \par}
+{\large Zweitgutachten: $svb$ \par}
+$endif$
+\let\mainmatterreal\mainmatter
+\let\mainmatter\relax

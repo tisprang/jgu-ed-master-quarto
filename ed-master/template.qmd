@@ -1,0 +1,168 @@
+---
+title: "Titel der Arbeit"
+subtitle: "Untertitel der Arbeit"
+author:
+  - name: Maxine Musterfrau
+    affiliations:
+      address: Hauptstraße 10
+      city: Mainz
+      country: Germany
+      postal-code: 65187
+    email: name@students.uni-mainz.de
+city-of-birth: Mainz
+date: today
+date-format: "YYYY"
+sva: Prof. Dr. Kai Arzheimer
+svb: Prof. Dr. Claudia Landwehr
+student-number: 1234567
+format:
+  ed-master-pdf: default
+author: tisprang
+date: last-modified
+---
+
+```{r}
+#| label: setup-packages
+
+library(knitr)
+library(kableExtra)
+library(ggplot2)
+```
+
+\pagebreak
+
+\pagenumbering{roman}
+
+# German Summary{.unnumbered}
+
+\begingroup
+\fontsize{11pt}{11pt}\selectfont
+\begin{otherlanguage}{ngerman}
+\lipsum[1-3]
+\end{otherlanguage}
+\endgroup
+\pagebreak
+
+\tableofcontents
+
+\pagebreak
+
+\listoffigures
+
+\pagebreak
+
+\listoftables
+
+\pagebreak
+
+\pagenumbering{arabic}
+
+# Introduction {#sec-A}
+
+\lettrine[lines=2, findent=3pt, nindent=0pt]{F}{irst} \lipsum[5-9]
+
+::: {#fig-example fig-pos="t"}
+
+::: {.figure-content}
+
+```{r}
+#| label: example-figure
+#| fig-height: 3.5
+
+data.frame(
+  a = c(1, 5, 2, 5, 6),
+  b = c(5, 2, 43, 5, 1)
+) |>
+  ggplot(aes(a, b)) +
+    geom_point()
+```
+
+:::
+
+\floatfoot{\textbf{Note:} Own illustration.}
+
+Example Figure
+
+:::
+
+
+\lipsum[12-14]
+
+::: {#tbl-example}
+
+\begingroup
+\fontsize{10pt}{10pt}\selectfont
+
+::: {.table-content}
+```{r}
+#| label: table-example
+
+data.frame(
+        col1 = c(
+            "Lorem",
+            "ipsum",
+            "dolor"
+        ),
+        col2 = c(
+            "sit",
+            "amet",
+            "consectetur"
+        ),
+        col3 = c(
+            "adipisici",
+            "elit",
+            "sed"
+        )
+    ) |>
+    kable(
+        col.names = c("Column 1", "Column 2", "Column 3"),
+        align = c("l", "l", "r"),
+        booktabs = TRUE,
+        linesep = ""
+    ) |>
+    kable_styling(full_width = TRUE) |>
+    row_spec(0, bold = TRUE)
+```
+
+\lipsum[15-16]
+
+# References {.unnumbered}
+
+\chaptermark{References}
+
+:::{#refs}
+:::
+
+\appendix
+
+# Appendix {.unnumbered}
+
+\chaptermark{Appendix}
+\renewcommand{\thetable}{A\arabic{table}}
+\renewcommand{\thefigure}{A\arabic{figure}}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
+::: {#fig-appendix fig-pos="t"}
+
+::: {.figure-content}
+
+```{r}
+#| label: appendix-figure
+#| fig-height: 3.5
+
+data.frame(
+  a = c(1, 5, 2, 5, 6),
+  b = c(5, 2, 43, 5, 1)
+) |>
+  ggplot(aes(a, b)) +
+    geom_point()
+```
+
+:::
+
+\floatfoot{\textbf{Note:} Own illustration for the appendix.}
+
+Appendix Figure
+
+:::

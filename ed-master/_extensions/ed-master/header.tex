@@ -1,0 +1,41 @@
+\usepackage{lipsum}
+\usepackage[nottoc]{tocbibind}
+\usepackage[titles]{tocloft}
+\usepackage[defaultlines=3,all]{nowidow}
+\usepackage[bottom,hang,flushmargin]{footmisc}
+\usepackage{lettrine}
+\usepackage[justification=justified,singlelinecheck=false,labelfont={bf},figurewithin=none]{caption}
+\usepackage[capposition=top]{floatrow}
+\usepackage{booktabs, longtable, colortbl, array}
+\usepackage{dcolumn}
+\usepackage[ngerman]{babel}
+\renewcommand{\cftdot}{}
+\counterwithout{footnote}{chapter}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\renewcommand\cftchapfont{\mdseries}
+\renewcommand\cftchappagefont{\mdseries}
+\setlength{\cftbeforechapskip}{6pt}
+\setlength{\cftbeforesecskip}{0pt}
+\setlength{\cftbeforesubsecskip}{0pt}
+\raggedbottom
+\addtokomafont{disposition}{\rmfamily}
+\KOMAoptions{headings=small}
+\setkomafont{pageheadfoot}{\normalfont\normalcolor\footnotesize}
+\setkomafont{pagenumber}{\normalfont\normalcolor\footnotesize}
+\makeatletter
+\def\@makechapterhead#1{%
+    {\parindent \z@
+    \interlinepenalty\@M
+    \fontsize{40}{40}\centering \textbf{\thechapter}%
+    \par% Space between number and title
+    \LARGE\textsc{#1}%
+    \par\vspace{8em}% Space between title and text
+}}
+\makeatother
+\usepackage[automark,headsepline=.4pt,plainheadsepline,autooneside=false]{scrlayer-scrpage}
+\clearpairofpagestyles
+\renewcommand*{\chaptermarkformat}{%
+}
+\lohead[\pagemark]{\pagemark {   } \textsc{$if(author)$$author$$endif$}}
+\rehead[\pagemark]{\textsc{\headmark} {   } \pagemark}

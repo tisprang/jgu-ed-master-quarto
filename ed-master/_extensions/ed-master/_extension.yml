@@ -1,0 +1,41 @@
+title: Ed-master
+author: tisprang
+version: 0.1.0
+quarto-required: ">=1.4.507"
+contributes:
+  formats:
+    pdf:
+      toc: true
+      toc-depth: 3
+      toc-title: "Table of Contents"
+      lof: true
+      lot: true
+      number-sections: true
+      number-depth: 3
+      cap-location: top
+      fig-pos: "tph"
+      fig-dpi: 300
+      papersize: a4
+      classoptions: [twoside=semi, listof=nochaptergap]
+      geometry:
+        - left=2cm
+        - right=3.5cm
+        - top=2cm
+        - bottom=2cm
+      linestretch: 1.5
+      fontsize: 12pt
+      indent: true
+      include-in-header: header.tex
+      template-partials:
+        - before-body.tex
+        - toc.tex
+        - after-body.tex
+execute:
+  echo: false
+  warning: false
+link-citations: true
+linkcolor: black
+citecolor: black
+urlcolor: black
+always_allow_html: yes
+

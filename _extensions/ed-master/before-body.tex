@@ -1,3 +1,7 @@
+\renewcommand*{\chaptermarkformat}{%
+}
+\lohead[\pagemark]{\pagemark {   } \textsc{$for(by-author)$$by-author.name.literal$$endfor$}}
+\rehead[\pagemark]{\textsc{\headmark} {   } \pagemark}
 $if(has-frontmatter)$
 \frontmatter
 $endif$

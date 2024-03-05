@@ -1,4 +1,5 @@
 \usepackage{lipsum}
+\usepackage{garamondlibre}
 \usepackage[nottoc]{tocbibind}
 \usepackage[titles]{tocloft}
 \usepackage[defaultlines=3,all]{nowidow}
@@ -28,14 +29,10 @@
     {\parindent \z@
     \interlinepenalty\@M
     \fontsize{40}{40}\centering \textbf{\thechapter}%
-    \par% Space between number and title
+    \par
     \LARGE\textsc{#1}%
-    \par\vspace{8em}% Space between title and text
+    \par\vspace{8em}
 }}
 \makeatother
 \usepackage[automark,headsepline=.4pt,plainheadsepline,autooneside=false]{scrlayer-scrpage}
 \clearpairofpagestyles
-\renewcommand*{\chaptermarkformat}{%
-}
-\lohead[\pagemark]{\pagemark {   } \textsc{$if(author)$$author$$endif$}}
-\rehead[\pagemark]{\textsc{\headmark} {   } \pagemark}

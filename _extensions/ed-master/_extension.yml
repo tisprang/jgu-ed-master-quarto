@@ -5,6 +5,7 @@ quarto-required: ">=1.4.507"
 contributes:
   formats:
     pdf:
+      documentclass: scrreprt
       toc: true
       toc-depth: 3
       toc-title: "Table of Contents"
@@ -16,7 +17,7 @@ contributes:
       fig-pos: "tph"
       fig-dpi: 300
       papersize: a4
-      classoptions: [twoside=semi, listof=nochaptergap]
+      classoption: [twoside=semi, listof=nochaptergap]
       geometry:
         - left=2cm
         - right=3.5cm
@@ -30,12 +31,12 @@ contributes:
         - before-body.tex
         - toc.tex
         - after-body.tex
-execute:
-  echo: false
-  warning: false
-link-citations: true
-linkcolor: black
-citecolor: black
-urlcolor: black
-always_allow_html: yes
+      execute:
+        echo: false
+        warning: false
+      link-citations: true
+      linkcolor: black
+      citecolor: black
+      urlcolor: black
+      always_allow_html: yes
 

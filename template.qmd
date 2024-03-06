@@ -7,9 +7,9 @@ author:
       address: Hauptstraße 10
       city: Mainz
       country: Germany
-      postal-code: 65187
+      postal-code: 12345
     email: name@students.uni-mainz.de
-city-of-birth: Mainz
+city-of-birth: Wien
 date: today
 date-format: "YYYY"
 sva: Prof. Dr. Kai Arzheimer
